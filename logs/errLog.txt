@@ -1,0 +1,6 @@
+20225707	09:57:06	edb1ef4e-a23b-4c2e-b97f-277a3277a442	Error: undefined
+20220407	10:04:55	87e0275e-90cd-4e3f-ad3f-270f13917ca6	Error: undefined
+20220407	10:04:57	3e09c52b-826c-4b57-b497-064d9eaa196c	Error: undefined
+20221007	10:10:48	3f4d90f2-2de7-4815-8ef2-d90889ba827a	Error	undefined
+20221107	10:11:25	b8d436a4-8850-46ab-9806-eedd95698ccc	Error: Not allowed by CORS
+20220307	11:03:40	0f8415aa-d9f9-44ef-bbe2-b772fa0038a2	Error: ENOENT: no such file or directory, stat '/home/stephane/courses/node-npm-modules/routes/index.html'

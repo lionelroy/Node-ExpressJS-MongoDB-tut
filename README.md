@@ -12,7 +12,7 @@
   <li>9(MVC REST API)</li>
   <li>10(Authentication)</li>
   <li>11(JWT Auth)</li>
-  <li>12()</li>
+  <li>12(User Roles/Authorization)</li>
 </ul>
 
 
@@ -33,7 +33,6 @@ Steps:
 14. npm i bcrypt(Besides incorporating a salt to protect against rainbow table attacks, bcrypt is an adaptive function)
 15. npm i dotenv jsonwebtoken cookie-parser
 16. In your node console run--->    require('crypto').randomBytes(64).toString('hex')...This will give us a random crypto bytes string we can use for our access token secret in our .env ...Run the same command a second time to get a random crypto bytes string for your refresh token secret.
-17. 
 
 
 

@@ -3,15 +3,15 @@ const data = {
   setEmployees: function (data) { this.employees = data }
 }
 
-const getAllEmployees =(req, res) => {
+const getAllEmployees = (req, res) => {
   res.json(data.employees);
 }
 
 const createNewEmployee = (req, res) => {
   const newEmployee = {
-    id: data.employees?.length ? data.employees[data.employees.length - 1].id + 1 : 1,      
-    firstname: req.body.firstname,
-    lastname: req.body.lastname
+      id: data.employees?.length ? data.employees[data.employees.length - 1].id + 1 : 1,
+      firstname: req.body.firstname,
+      lastname: req.body.lastname
   }
 
   if (!newEmployee.firstname || !newEmployee.lastname) {
@@ -53,4 +53,10 @@ const getEmployee = (req, res) => {
   res.json(employee);
 }
 
-module.exports = { getAllEmployees, createNewEmployee, updateEmployee, deleteEmployee, getEmployee }
+module.exports = {
+  getAllEmployees,
+  createNewEmployee,
+  updateEmployee,
+  deleteEmployee,
+  getEmployee
+}

@@ -19,16 +19,27 @@ const handleLogin = async (req, res) => {
   if (match) {
       // create JWTs
       const accessToken = jwt.sign(
-        { "username": foundUser.username },
-        process.env.ACCESS_TOKEN_SECRET,
-        { expiresIn: '30s' }
-    );
-    const refreshToken = jwt.sign(
-        { "username": foundUser.username },
-        process.env.REFRESH_TOKEN_SECRET,
-        { expiresIn: '1d' }
-    );
-      res.json({ 'success': `User ${user} is logged in!` });
+          { "username": foundUser.username },
+          process.env.ACCESS_TOKEN_SECRET,
+        //   Change to 5min-15min in production
+          { expiresIn: '30s' }
+      );
+      const refreshToken = jwt.sign(
+          { "username": foundUser.username },
+          process.env.REFRESH_TOKEN_SECRET,
+          { expiresIn: '1d' }
+      );
+      // Saving refreshToken with current user
+      const otherUsers = usersDB.users.filter(person => person.username !== foundUser.username);
+      const currentUser = { ...foundUser, refreshToken };
+      usersDB.setUsers([...otherUsers, currentUser]);
+      await fsPromises.writeFile(
+          path.join(__dirname, '..', 'model', 'users.json'),
+          JSON.stringify(usersDB.users)
+      );
+    //   Send the cookie as http only to eliminate javascript access and vulnerabilities
+    res.cookie('jwt', refreshToken, { httpOnly: true, sameSite: 'None', secure: true, maxAge: 24 * 60 * 60 * 1000 });      
+    res.json({ accessToken });
   } else {
       res.sendStatus(401);
   }

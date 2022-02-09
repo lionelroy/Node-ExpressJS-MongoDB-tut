@@ -5,28 +5,25 @@ const fs = require('fs');
 const fsPromises = require('fs').promises;
 const path = require('path');
 
-// You can setup a 2nd parameter if needed and also add it to your emit event in index.js.
 const logEvents = async (message, logName) => {
-  const dateTime = `${format(new Date(), 'yyyymmdd\tHH:mm:ss')}`;
-  const logItem = `${dateTime}\t${uuid()}\t${message}\n`
-  console.log(logItem);
-  try {
-    // If logs directory doesn't exists, create one.
-    if (!fs.existsSync(path.join(__dirname, '..', 'logs'))) {
-      await fsPromises.mkdir(path.join(__dirname, '..', 'logs'));
+    const dateTime = `${format(new Date(), 'yyyyMMdd\tHH:mm:ss')}`;
+    const logItem = `${dateTime}\t${uuid()}\t${message}\n`;
+
+    try {
+        if (!fs.existsSync(path.join(__dirname, '..', 'logs'))) {
+            await fsPromises.mkdir(path.join(__dirname, '..', 'logs'));
+        }
+
+        await fsPromises.appendFile(path.join(__dirname, '..', 'logs', logName), logItem);
+    } catch (err) {
+        console.log(err);
     }
-    // Testing
-      await fsPromises.appendFile(path.join(__dirname, '..', 'logs', logName), logItem);
-  } catch (err) {
-      console.log(err)
-  }
 }
 
 const logger = (req, res, next) => {
-  logEvents(`${req.method}\t${req.headers.origin}\t${req.url}`, 'reqLog.txt');
-  console.log(`${req.method} ${req.path}`);
-  next();
+    logEvents(`${req.method}\t${req.headers.origin}\t${req.url}`, 'reqLog.txt');
+    console.log(`${req.method} ${req.path}`);
+    next();
 }
 
 module.exports = { logger, logEvents };
-

@@ -1,7 +1,5 @@
 <h2>Node-Tutorial<h2>
 <h3>Back End development with NodeJS, ExpressJS and MongoDB</h3>
-- This is a node.js course offered by Dave Gray.
-- You can find part 1 & 2 of the Full Node.js course on his youtube channel.
 
 <h4>Chapters:</h4>
 <ul>
@@ -14,6 +12,7 @@
   <li>9(MVC REST API)</li>
   <li>10(Authentication)</li>
   <li>11(JWT Auth)</li>
+  <li>12()</li>
 </ul>
 
 

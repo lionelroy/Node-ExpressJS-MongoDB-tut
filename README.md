@@ -2,7 +2,7 @@
 <h3>Back-End development with NodeJS, ExpressJS and MongoDB</h3>
 
 
-**Deploy by clicking the button above**
+**Deploy by clicking the button below**
 
 [<img src="https://cdn.gomix.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Fremix-button.svg" width="163px" />](https://glitch.com/edit/#!/import/github/lionelroy/Node-ExpressJS-MongoDB-tut)
 

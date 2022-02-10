@@ -1,5 +1,10 @@
-<h2>Node-Tutorial<h2>
-<h3>Back End development with NodeJS, ExpressJS and MongoDB</h3>
+<h2>MERN-stack(back-end)<h2>
+<h3>Back-End development with NodeJS, ExpressJS and MongoDB</h3>
+
+
+**Deploy by clicking the button above**
+[<img src="https://cdn.gomix.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Fremix-button.svg" width="163px" />](https://glitch.com/edit/#!/import/github/lionelroy/Node-ExpressJS-MongoDB-tut)
+
 
 <h4>Chapters:</h4>
 <ul>
@@ -13,6 +18,9 @@
   <li>10(Authentication)</li>
   <li>11(JWT Auth)</li>
   <li>12(User Roles/Authorization)</li>
+  <li>13(Intro to MongoDB and Mongoose)</li>
+  <li>14(Mongoose Data Models)</li>
+  <li>15(Async CRUD Operations)</li>
 </ul>
 
 

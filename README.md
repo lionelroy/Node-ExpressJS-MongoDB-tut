@@ -36,14 +36,14 @@ Steps:
   <li>How to build a ExpressJS web server</li>
   <li>Middleware</li>
   <li>Routers</li>
-  <li>MVC pattern and REST API)</li>
+  <li>MVC pattern and REST API</li>
+  <li>How to simulate REST API calls with Thunder Client</li>
   <li>Authentication</li>
   <li>JWT Auth</li>
   <li>User Roles/Authorization</li>
   <li>MongoDB and Mongoose</li>
   <li>Mongoose Data Models</li>
   <li>Async CRUD Operations</li>
-  <li>How to simulate REST API calls with Thunder Client</li>
   <li>How to use the Glitch deployment platform</li>
 </ul>
 

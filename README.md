@@ -33,7 +33,7 @@ Steps:
 <ul>
   <li>Event Emitters</li>
   <li>How to build a Node.js Web Server from scratch</li>
-  <li>How to build aExpressJS</li>
+  <li>How to build a ExpressJS web server</li>
   <li>Middleware</li>
   <li>Routers</li>
   <li>MVC pattern and REST API)</li>
